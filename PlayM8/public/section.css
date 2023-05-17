@@ -1,0 +1,17 @@
+
+.main_section {
+    min-height: 100vh;
+    width: 100%;
+}
+
+#about {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+#info {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+#school {
+    background-color: rgba(0, 0, 0, 0.6);
+}
