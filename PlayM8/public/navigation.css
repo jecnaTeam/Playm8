@@ -1,12 +1,12 @@
 
-.container {
-    display: flex;
-    height: 100vh;
-  }
   
   .navigation {
-    width: 200px; /* Adjust this value as needed */
+   
     background-color: rgb(185, 151, 221);
+    max-width: 200px;
+    position: fixed;
+    left: 0;
+    height: 100vh;
   }
   
   .navigation ul {

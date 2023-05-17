@@ -5,3 +5,16 @@
     scroll-behavior: smooth;
 
 }
+#container{
+display: flex;
+
+height: 100%;
+}
+#navigation{
+
+    flex: 3;
+}
+#sections{
+flex: 7;
+
+}
