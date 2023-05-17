@@ -1,0 +1,29 @@
+
+  
+  .navigation {
+   
+    background-color: rgb(185, 151, 221);
+    max-width: 200px;
+    position: fixed;
+    left: 0;
+    height: 100vh;
+  }
+  
+  .navigation ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .navigation li {
+    padding: 10px;
+  }
+  
+  .navigation a {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .content {
+    flex-grow: 1;
+    /* Additional styles for the main content area */
+  }
