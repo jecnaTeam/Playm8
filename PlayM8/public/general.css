@@ -1,20 +1,43 @@
-*{
-
-    padding: 0;
-    margin: 0;
-    scroll-behavior: smooth;
-
+* {
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
 }
-#container{
-display: flex;
 
-height: 100%;
+#container {
+  display: flex;
+  flex-flow: row wrap;
+  height: 100%;
 }
-#navigation{
 
-    flex: 3;
+#navigation {
+  width: 100px;
 }
-#sections{
-flex: 7;
 
+#sections {
+  flex: 7;
+}
+
+footer {
+  z-index: 50;
+  background-color: red;
+  bottom: 0;
+  height: 50px;
+  width: 100%;
+  text-align: center;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  z-index: 50;
+}
+
+header > img {
+  max-width: 400px;
+  height: 100px;
+  margin: 1em;
 }

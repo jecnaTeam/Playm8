@@ -1,0 +1,19 @@
+.section_container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(
+    3,
+    1fr
+  ); /* Definuje tři řádky s rovnoměrným podílem dostupného prostoru */
+  grid-gap: 10px;
+}
+
+.row {
+  display: flex;
+}
+
+.card {
+  background-color: #f2f2f2;
+  padding: 20px;
+  text-align: center;
+}
