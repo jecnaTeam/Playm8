@@ -12,16 +12,16 @@
 }
 
 .main_section .model_box {
+  z-index: 30;
   position: absolute;
-  top: 7%;
   left: 12%;
 }
 
 .main_section .about_info {
   max-width: 45%;
   position: absolute;
-  right: 5%;
-  bottom: 10%;
+  right: 2%;
+  bottom: 7%;
   background-color: black;
   color: white;
   padding: 1em;
@@ -56,11 +56,11 @@
   justify-content: center;
 }
 
-/* Test frame */
+/* CARDS */
 
 .card {
   position: relative;
-  margin: 1.5em;
+  margin: 1em;
   width: 320px;
   height: 320px;
   background-image: url("../assets/ram4.png"); /* Frame path */
@@ -69,8 +69,8 @@
 }
 
 .manager > .card {
-  width: 340px;
-  height: 350px;
+  max-width: 340px;
+  max-height: 350px;
 }
 
 .card-frame {
@@ -87,14 +87,11 @@
   bottom: 10px;
   left: 35px;
   padding: 1em;
-  /* Další styly pro obsah karty (text, obrázek atd.) */
 }
 
 .text {
   padding: 0.4em;
 }
-
-/* card */
 
 .card > .name {
   position: absolute;
@@ -103,3 +100,26 @@
   font-size: 1.4em;
   font-weight: 600;
 }
+
+@media only screen and (max-width: 400px) {
+  .card {
+    width: 220px;
+    height: 220px;
+  } 
+  .card > .name {
+    font-size: 1.1em;
+    top: 13px;
+    left: 25px;
+  } 
+  .manager > .card {
+    width: 240px;
+    height: 240px;
+    margin-bottom: 2em;
+  }
+  .manager > .card > .name {
+    top: 15px;
+    left: 25px;
+    font-size: 1.3em;
+  }
+}
+

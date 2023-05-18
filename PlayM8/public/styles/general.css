@@ -1,30 +1,30 @@
-@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400;500;600&display=swap%27");
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400;500;600;700;800;900&display=swap%27");
 
 * {
   padding: 0;
   margin: 0;
   scroll-behavior: smooth;
   box-sizing: border-box;
-  font-family: "Inconsolata", monospace;
 }
 
 body {
-  background-image: url("../../public/assets/web-background.png");
+  font-family: "Inconsolata", monospace;
+  color: white;
+  background-image: url("https://media.discordapp.net/attachments/759394212029792267/1108849980631945337/web-background-v1.png?width=1048&height=1102");
   background-size: 100%;
   background-position: top;
   background-repeat: repeat-y;
-  color: white;
+  width: 100vw;
+  height: 100vh;
 }
 
 #container {
-  min-width: 400px;
-  display: flex;
-  flex-flow: row;
-  height: 100%;
+  display: grid;
+  grid-template-columns: 200px 1fr ;
 }
 
-#navigation {
-  width: 150px;
+#sections {
+  width: 100%;
 }
 
 @media only screen and (max-width: 615px) {
@@ -34,24 +34,7 @@ body {
   #container {
     display: block;
   }
-}
-
-#sections {
-  flex: 7;
-}
-
-/* Header */
-
-header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  z-index: 50;
-}
-
-header > img {
-  max-width: 400px;
-  height: 100px;
-  margin: 1em;
+  #sections {
+    margin: 0;
+  }
 }
