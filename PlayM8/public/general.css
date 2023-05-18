@@ -5,6 +5,13 @@
   box-sizing: border-box;
 }
 
+body {
+  background-image: url("https://cdn.shopify.com/s/files/1/0068/5074/0281/t/514/assets/inner-page-brand-bg-desktop.png?v=162539029213179130751684240850");
+  background-size: 100%;
+  background-position: top;
+  background-repeat: repeat-y;
+}
+
 #container {
   display: flex;
   flex-flow: row wrap;
@@ -47,15 +54,3 @@ header > img {
   height: 100px;
   margin: 1em;
 }
-
-
-
-
-
-
-
-
-
-
-
-

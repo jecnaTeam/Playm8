@@ -32,25 +32,13 @@
   line-height: 1.25em;
 }
 
-#about {
-  background-color: rgba(0, 0, 0, 0.2);
-}
 
-#school {
-  background-color: rgba(0, 0, 0, 0.6);
-}
 
-.main_section#info {
-  background-color: rgba(0, 0, 0, 0.4);
+.main_section#cards {
   position: relative;
 }
 
-.main_section#info {
-  background-color: rgba(0, 0, 0, 0.4);
-  position: relative;
-}
-
-.main_section#info > .section_container {
+.main_section#cards > .section_container {
   max-width: 1200px;
   margin: 1em auto;
   padding: .5em;
@@ -59,20 +47,20 @@
   align-items: center;
 }
 
-.main_section#info > .section_container > .manager {
+.main_section#cards > .section_container > .manager {
   display: flex;
   flex-flow: wrap;
   margin-bottom: 1em;
 }
-.main_section#info > .section_container > .team {
+.main_section#cards > .section_container > .team {
   display: flex;
   flex-flow: wrap;
   justify-content: center;
 }
 
 .section_container .manager > .card {
-  width: 260px;
-  height: 280px;
+  width: 280px;
+  height: 290px;
 }
 
 .section_container .card {
