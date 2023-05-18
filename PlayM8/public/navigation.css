@@ -15,12 +15,19 @@
   }
   
   .navigation ul {
+    
     list-style-type: none;
     padding: 0;
   }
   
+  .navigation li:hover {
+background-color: rgba(0, 0, 0, 0.88);
+box-shadow: 10px 0px 15px rgba(255, 245, 245, 0.807);
+  }
+
   .navigation li {
     padding: 10px;
+    margin-bottom: 20px;
   }
   
   .navigation a {
