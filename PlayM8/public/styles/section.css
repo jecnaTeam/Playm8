@@ -63,7 +63,7 @@
   margin: 1.5em;
   width: 320px;
   height: 320px;
-  background-image: url("assets/ram4.png"); /* Frame path */
+  background-image: url("../assets/ram4.png"); /* Frame path */
   background-size: cover;
   background-repeat: no-repeat;
 }
