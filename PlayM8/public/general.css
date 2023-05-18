@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&display=swap%27");
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400;500;600&display=swap%27");
 
 * {
   padding: 0;
@@ -13,6 +13,7 @@ body {
   background-size: 100%;
   background-position: top;
   background-repeat: repeat-y;
+  color: white;
 }
 
 #container {
@@ -39,7 +40,6 @@ body {
 
 footer {
   z-index: 50;
-  color: white;
   bottom: 0;
   height: 50px;
   width: 100%;
