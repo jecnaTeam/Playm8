@@ -1,11 +1,20 @@
 
   
   .navigation {
+    padding: 5px;
     width: 100px;
     height: 100vh;
-    background-color: rgba(180, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 1);
     position: fixed;
+    box-shadow: 15px 0px 15px rgba(0, 0, 0, 0.6);
+ 
   }
+  .textNavigation  {
+    font-weight:bolder;
+    color: white;
+  }
+
+    
   
   .navigation ul {
     list-style-type: none;
@@ -18,7 +27,7 @@
   
   .navigation a {
     text-decoration: none;
-    color: #333;
+
   }
   
   .content {
