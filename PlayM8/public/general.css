@@ -34,7 +34,7 @@ body {
 
 footer {
   z-index: 50;
-  background-color: red;
+  background-color: rgba(91, 3, 83, 0.2);
   bottom: 0;
   height: 50px;
   width: 100%;

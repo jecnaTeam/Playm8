@@ -4,10 +4,10 @@
     padding: 2px;
     width: 100px;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 1);
+    background-color: rgba(0, 0, 0, 0.4);
     position: fixed;
-    box-shadow: 15px 0px 15px rgba(0, 0, 0, 0.6);
- 
+    box-shadow: 10px 0px 10px rgba(91, 3, 83, 0.6);
+    
   }
   .textNavigation  {
     font-weight:bolder;
