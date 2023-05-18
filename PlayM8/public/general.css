@@ -48,32 +48,14 @@ header > img {
   margin: 1em;
 }
 
-.card-fine {
-  position: relative;
-  width: 300px;
-  height: 400px;
-  background-image: url('card-frame-02.png'); /* Nastavte cestu k obrázku rámečku */
-  background-size: cover;
-  background-repeat: no-repeat;
-}
 
-.card-frame {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
 
-.card-content {
-  position: absolute;
-  width: 80%;
-  bottom: 10px;
-  left: 35px;
-  padding: 1em;
-  /* Další styly pro obsah karty (text, obrázek atd.) */
-}
 
-.text {
-  padding: .4em;
-}
+
+
+
+
+
+
+
+
