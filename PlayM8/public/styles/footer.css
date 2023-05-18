@@ -1,0 +1,129 @@
+footer {
+  z-index: 50;
+  bottom: 0;
+  height: 50px;
+  text-align: center;
+  font-weight: 400;
+}
+
+footer > .footer_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.3em 2em;
+}
+
+footer > .footer_container > .box {
+  width: 70%;
+  margin: 0 auto;
+  padding: 1em 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer .box.about {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 1.5em;
+}
+
+footer .box.about > a {
+  padding: 0.4em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.6em;
+}
+
+footer .box.about > a > img {
+  width: 26px;
+  height: 26px;
+}
+
+footer p {
+  padding: 1.5em 0;
+}
+
+footer a {
+  height: 100%;
+  text-decoration: none;
+  color: white;
+  transition: all .2s ease-in;
+}
+
+footer a span {
+  padding: 0 2px 2px 0;
+  overflow: hidden;
+  position: relative;
+}
+footer a span::before {
+  content: "";
+  display: block;
+  height: 2px;
+  position: absolute;
+  bottom: -14px;
+  left: 0;
+  width: 0;
+  background-color: #e4002b;
+}
+
+footer a span:hover {
+  animation: itemHover .6 ease-in-out 1;
+}
+
+footer .box.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 80px;
+}
+
+footer .box.logo  img {
+  width: 200px;
+  height: 80px;
+  transition: all .3s ease-in-out;
+}
+
+footer .box.logo  img:hover {
+  width: 210px;
+  height: 85px;
+}
+
+
+/* footer a span::after {
+  content: "";
+  width: 92%;
+  height: 92%;
+  position: absolute;
+  top: 0;
+  left: 0;
+} */
+
+footer a:hover {
+  color: rgba(97, 5, 97, 0.6);
+  font-weight: 900;
+  font-size: 1.15em;
+}
+
+@media only screen and (max-width: 1100px) {
+  footer > .footer_container > .box {
+    width: 100%;
+    margin: 0 auto;
+    flex-direction: column;
+    gap: 3em;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  footer .box.about {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.7em;
+  }
+}

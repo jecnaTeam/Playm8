@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400;500;600;700;800;900&display=swap%27");
+
+* {
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inconsolata", monospace;
+  color: white;
+  background-image: url("https://media.discordapp.net/attachments/759394212029792267/1108849980631945337/web-background-v1.png?width=1048&height=1102");
+  background-size: 100%;
+  background-position: top;
+  background-repeat: repeat-y;
+  width: 100vw;
+  height: 100vh;
+}
+
+#container {
+  display: grid;
+  grid-template-columns: 200px 1fr ;
+}
+
+#sections {
+  width: 100%;
+}
+
+@media only screen and (max-width: 615px) {
+  #navigation {
+    display: none;
+  }
+  #container {
+    display: block;
+  }
+  #sections {
+    margin: 0;
+  }
+}

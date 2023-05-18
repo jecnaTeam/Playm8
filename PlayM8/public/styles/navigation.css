@@ -1,0 +1,49 @@
+.navigation {
+  padding: 2px;
+  width: 200px;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  box-shadow: 10px 0px 10px rgba(91, 3, 83, 0.6);
+}
+.textNavigation {
+  font-weight: bolder;
+  color: white;
+}
+
+.navigation ul {
+  height: 100%;
+  list-style-type: none;
+  padding: 0;
+  position: relative;
+}
+
+.navigation_logo {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  text-align: center;
+}
+
+.navigation_logo > img {
+  width: 70%;
+}
+
+.navigation li:hover {
+  background-color: rgba(0, 0, 0, 0.88);
+  box-shadow: 10px 0px 15px rgba(255, 245, 245, 0.807);
+}
+
+.navigation li {
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.navigation a {
+  margin-top: 20px;
+  text-decoration: none;
+}
+
+.content {
+  flex-grow: 1;
+}
