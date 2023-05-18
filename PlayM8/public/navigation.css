@@ -2,7 +2,7 @@
   
   .navigation {
     padding: 2px;
-    width: 100px;
+    width: 118px;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.4);
     position: fixed;
@@ -26,7 +26,9 @@
   }
   
   .navigation a {
+    margin-top: 20px;
     text-decoration: none;
+    
 
   }
   
