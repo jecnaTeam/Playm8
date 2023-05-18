@@ -1,47 +1,88 @@
-
 .main_section {
-    min-height: 100vh;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .main_section > .box {
-    flex: 1;
-    border: solid 1px black;
-    position: relative;
+  flex: 1;
+  border: solid 1px black;
+  position: relative;
 }
 
 .main_section .model_box {
-    position: absolute;
-    top: 7%;
-    left: 12%;
+  position: absolute;
+  top: 7%;
+  left: 12%;
 }
 
 .main_section .about_info {
-    max-width: 45%;
-    position: absolute;
-    right: 5%;
-    bottom: 10%;
-    background-color: black;
-    color: white;
-    padding: 1em;
+  max-width: 45%;
+  position: absolute;
+  right: 5%;
+  bottom: 10%;
+  background-color: black;
+  color: white;
+  padding: 1em;
 }
 
 .main_section .about_info p {
-    font-size: 1.4em;
-    line-height: 1.25em;
+  font-size: 1.4em;
+  line-height: 1.25em;
 }
 
 #about {
-    background-color: rgba(0, 0, 0, 0.2);
-}
-
-#info {
-    background-color: rgba(0, 0, 0, 0.4);
-    position: relative;
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 #school {
-    background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.main_section#info {
+  background-color: rgba(0, 0, 0, 0.4);
+  position: relative;
+}
+
+.main_section#info {
+  background-color: rgba(0, 0, 0, 0.4);
+  position: relative;
+}
+
+.main_section#info > .section_container {
+  max-width: 1400px;
+  margin: 4em auto;
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main_section#info > .section_container > .manager {
+  display: flex;
+  flex-flow: wrap;
+  margin-bottom: 5em;
+}
+.main_section#info > .section_container > .team {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
+}
+
+.section_container .manager > .card {
+  width: 320px;
+  height: 320px;
+}
+
+.section_container .card {
+  width: 300px;
+  height: 300px;
+  margin: 2.5em;
+  border-radius: 25%;
+  border: solid 2px rgb(0, 0, 0);
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+@media screen {
 }
