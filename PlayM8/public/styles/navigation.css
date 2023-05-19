@@ -1,7 +1,6 @@
 .navigation {
   width: 190px;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.1);
   position: fixed;
   display: flex;
   flex-direction: column;
@@ -11,10 +10,23 @@
 
 .navigation ul {
   padding: 1em;
+  margin: 15px 0 0 15px;
   list-style-type: none;
   position: relative;
   display: flex;
   flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-bottom: 15px solid rgba(176, 19, 176, 0.3);
+  border-right: 15px solid rgba(176, 19, 176, 0.3);
+  border-left: 3px solid rgba(176, 19, 176, 0.3);
+  border-top: 3px solid rgba(176, 19, 176, 0.3);
+  border-radius: 30px;
+  transition: all .5s ease-in-out;
+}
+
+.navigation ul:hover {
+  border-color: rgba(176, 19, 176, 0.4);
+  background-color: rgba(25, 25, 25, 0.1);
 }
 
 .navigation_logo {
@@ -58,11 +70,23 @@
   height: 42px;
 }
 
+.navigation li a img:hover {
+  width: 45px;
+  height: 45px;
+}
+
 .content {
   flex-grow: 1;
 }
 
 @media only screen and (max-width: 800px) {
+  .navigation ul {
+    padding: .7em;
+    border-bottom: 10px solid rgba(176, 19, 176, 0.3);
+    border-right: 10px solid rgba(176, 19, 176, 0.3);
+    border-left: 2px solid rgba(176, 19, 176, 0.3);
+    border-top: 2px solid rgba(176, 19, 176, 0.3);
+  }
   .navigation {
     width: 140px;
   }
@@ -71,10 +95,5 @@
   }
   .navigation li a {
     justify-content: center;
-  }
-  .navigation li a img:hover {
-    width: 48px;
-    height: 48px;
-    fill: 000;
   }
 }
