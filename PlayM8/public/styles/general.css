@@ -26,8 +26,12 @@ body {
   height: 100vh;
 }
 
+
 #navigationLogin {
-  display:flex
+  display:flex;
+  position: fixed;
+  right: 5px;
+  top: 5px;
 
 }
 
@@ -35,6 +39,7 @@ body {
 #container {
   display: grid;
   grid-template-columns: 200px 1fr ;
+  position: relative;
 }
 
 #sections {

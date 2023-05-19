@@ -2,10 +2,25 @@
 <% if (!logged) { %>
     <div id="LoggedOut">
          <form action="/login">
-
-            <input type="text" name="username">
-            <input type="password" name="password" id="passwordInput">
-            <input type="submit" value="Log in">
+            <table>
+                <tr>
+                    <th>
+                        <input type="text" name="username">
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        <input type="password" name="password" id="passwordInput">
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        <input type="submit" value="Log in">
+                    </th>
+                </tr>
+            </table>
+            
+           
            
         </form>
     </div>
