@@ -1,0 +1,24 @@
+
+<% if (!logged) { %>
+    <div id="LoggedOut">
+         <form action="/login">
+
+            <input type="text" name="username">
+            <input type="password" name="password" id="passwordInput">
+            <input type="submit" value="Log in">
+           
+        </form>
+    </div>
+
+    <%} else { %>
+<div id="LoggedIn">
+<span><% username %></span>
+
+<form action="/LogOut">
+
+    <input type="button" value="Log out">
+
+</form>
+
+</div>
+    <% } %>
