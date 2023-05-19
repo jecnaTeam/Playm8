@@ -10,11 +10,11 @@ app.use('/public', express.static("public"))
 
 
 
-
+const logged = false;
 
 app.get("/", (req, res) => {
 
-res.render("index" );
+res.render("index" , {logged : logged} );
 
 
 });
@@ -94,7 +94,7 @@ app.post("/login", (req, res) => {
 
     // Hledání uživatele podle uživatelského jména a hesla
     const foundUser = users.find(user => user.username === username && user.password === password);
-    const logged = Boolean(foundUser); // true, pokud byl uživatel nalezen, jinak false
+     logged = Boolean(foundUser); // true, pokud byl uživatel nalezen, jinak false
 
     res.render("index", { logged: logged, username : username });
   });

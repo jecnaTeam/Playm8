@@ -26,6 +26,12 @@ body {
   height: 100vh;
 }
 
+#navigationLogin {
+  display:flex
+
+}
+
+
 #container {
   display: grid;
   grid-template-columns: 200px 1fr ;
