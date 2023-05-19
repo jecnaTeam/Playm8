@@ -1,12 +1,26 @@
 <%-include("head")-%>
 
+<script src="../public/scripts/scripts.js"></script>
+ <script>
+  function showDiv() {
+    var showDiv = document.getElementById("show");
+    var ikonka = document.getElementById("iconn")
+    showDiv.style.display = "block";
+    ikonka.style.display = "none";
+  }
+ </script>
   <div id="container">
     <div id="navigation">
       <%-include("navigation")-%>
  
     </div>
     <div id="navigationLogin">
-      <%-include("navigationLogin")-%>
+
+      <i class="fas fa-id-badge" id="iconn" style="font-size:60px; cursor: pointer" onclick="showDiv()"></i>
+      <div id="show">
+        <%-include("navigationLogin")-%>
+      </div>
+    
 
     </div>
     <div id="sections">
