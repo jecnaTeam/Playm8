@@ -4,24 +4,33 @@ const fs = require('fs');
 const path = require('path');
 
 
-
+app.use(express.urlencoded({extended:true}));
 app.set('view engine', 'ejs');
 app.use('/public', express.static("public"))
 
 
 
-const logged = false;
+let logged = false;
+let username;
+
+app.post("/LogOut", (req, res) => {
+
+logged = false;
+res.redirect("/");
+  
+  
+  });
 
 app.get("/", (req, res) => {
 
-res.render("index" , {logged : logged} );
+res.render("index" , {logged : logged, username : username} );
 
 
 });
 
 app.post("/register", (req, res) => {
   const password = req.body.password;
-  const username = req.body.username;
+ username = req.body.username;
 
   // Cesta k souboru JSON
   const filePath = path.join(__dirname, 'data.json');
@@ -69,7 +78,7 @@ app.post("/register", (req, res) => {
 
 app.post("/login", (req, res) => {
   const password = req.body.password;
-  const username = req.body.username;
+  username = req.body.username;
 
   // Cesta k souboru JSON
   const filePath = path.join(__dirname, 'data.json');
@@ -94,7 +103,11 @@ app.post("/login", (req, res) => {
 
     // Hledání uživatele podle uživatelského jména a hesla
     const foundUser = users.find(user => user.username === username && user.password === password);
-     logged = Boolean(foundUser); // true, pokud byl uživatel nalezen, jinak false
+    if(foundUser) {
+      logged = true
+      username = username;
+    }
+     
 
     res.render("index", { logged: logged, username : username });
   });
