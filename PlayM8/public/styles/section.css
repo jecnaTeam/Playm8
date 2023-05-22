@@ -7,7 +7,6 @@
   flex-direction: column;
 }
 
-
 /* ABOUT */
 
 .main_section#about {
@@ -64,8 +63,6 @@
   }
 }
 
-
-
 /* CARDS */
 
 .main_section#cards {
@@ -82,13 +79,9 @@
 }
 
 .main_section#cards > .section_container > .manager {
-  display: flex;
-  flex-flow: wrap;
   margin-bottom: 1em;
 }
 .main_section#cards > .section_container > .team {
-  display: flex;
-  flex-flow: wrap;
   justify-content: center;
 }
 
@@ -100,6 +93,15 @@
   background-image: url("../assets/ram4.png"); /* Frame path */
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+.team {
+  min-height: 70vh;
+  width: 100%;
+  margin: 5% 0;
+  display: grid;
+  place-items: center;
+  align-content: center;
 }
 
 .manager > .card {

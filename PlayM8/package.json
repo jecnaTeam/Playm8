@@ -2,7 +2,8 @@
   "dependencies": {
     "ejs": "^3.1.9",
     "express": "^4.18.2",
-    "fs": "^0.0.1-security",
-    "path": "^0.12.7"
+    "fspath": "^0.15.0",
+    "path": "^0.12.7",
+    "three": "^0.152.2"
   }
 }
