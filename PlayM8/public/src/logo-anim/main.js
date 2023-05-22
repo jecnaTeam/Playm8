@@ -1,44 +1,73 @@
 // import * as THREE from './three.js'
 import { GLTFLoader } from "./GLTFLoader.js";
+import * as THREE from './three.module.js'
 
 // Model Loaded variable
 let modelLoaded = false;
 
+const canvas = document.getElementById('model-view')
 const scene = new THREE.Scene();
+
+let mixer;
+
+// Loader
+const loader = new GLTFLoader()
+loader.load('../../../public/models/M81.glb', glb => {
+  const model = glb.scene;
+  model.scale.set(0.10, 0.10, 0.10);
+  scene.add(model);
+  mixer = new THREE.AnimationMixer(model);
+  const clips = glb.animations;
+  clips.forEach(clip => {
+    const action = mixer.clipAction(clip);
+    action.play();
+  });
+
+  animate();
+
+}, xhr => {
+  console.log((xhr.loaded / xhr.total * 100) + '% loaded');
+}, error => {
+  console.log("Error");
+})
+
+// Light
+const light = new THREE.DirectionalLight(0xffffff, 1);
+light.position.set(2, 2, 5);
+scene.add(light);
+
+// Canvas sizes
+const sizes = {
+  width: 500,
+  height: 500
+}
+
+// Camera
 const camera = new THREE.PerspectiveCamera(
   75,
-  window.innerWidth / window.innerHeight,
+  sizes.width / sizes.height,
   0.1,
   1000
 );
+camera.position.set(0, 1, 2);
 
-const renderer = new THREE.WebGLRenderer();
-renderer.setSize(500, 500);
-document.body.appendChild(renderer.domElement);
-
-// 3D model loader
-const loader = new GLTFLoader();
-var obj;
-loader.load("../public/models/M81.gltf", function (object) {
-  obj = object;
-  modelLoaded = true;
+// Renderer
+const renderer = new THREE.WebGLRenderer({
+  canvas,
+  aplha: true
 });
+renderer.setClearColor(0x00000000, 0);
+renderer.setSize(sizes.width, sizes.height);
 
-// Light
-const light = new THREE.HemisphereLight(0xffffff, 0x080820, 1);
 
-scene.add(light);
-camera.position.set(0, 20, 60);
-camera.lookAt(new THREE.Vector3(0, 10, 0));
+const clock = new THREE.Clock();
 
+// Animation
 function animate() {
-  requestAnimationFrame(animate);
-  if (modelLoaded) {
-    // obj.rotation.y += 0.03;
-    // obj.rotation.x += 0.01;
+  if (mixer) {
+    mixer.update(clock.getDelta());
   }
+  requestAnimationFrame(animate);
   renderer.render(scene, camera);
 }
 
-scene.add(obj);
-animate();

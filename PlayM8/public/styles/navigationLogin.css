@@ -1,12 +1,12 @@
-input{
-margin-top: 5px;
+input {
+  margin-top: 5px;
 }
 #show {
-    display: none;
-  }
-#loggedOut{
-    z-index: 2;
-  display:flex;
+  display: none;
+}
+#loggedOut {
+  z-index: 2;
+  display: flex;
   position: fixed;
   right: 5px;
   top: 5px;
@@ -17,6 +17,6 @@ margin-top: 5px;
   border-left: 15px solid rgba(90, 48, 90, 0.3);
   border-top: 3px solid rgba(80, 38, 80, 0.3);
   border-radius: 30px;
-  transition: all .5s ease-in-out;
+  transition: all 0.5s ease-in-out;
   border-radius: 20px;
 }

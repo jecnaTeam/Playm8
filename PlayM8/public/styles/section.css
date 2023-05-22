@@ -71,7 +71,7 @@
 
 .main_section#cards > .section_container {
   max-width: 1200px;
-  margin: 1em auto;
+  margin: 1.5em auto;
   padding: 0.5em;
   display: flex;
   flex-direction: column;
@@ -99,9 +99,15 @@
   min-height: 70vh;
   width: 100%;
   margin: 5% 0;
+  row-gap: 2em;
   display: grid;
-  place-items: center;
-  align-content: center;
+  align-items: center;
+  justify-items: center;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.manager.team {
+  grid-template-columns: 1fr;
 }
 
 .manager > .card {
@@ -156,5 +162,17 @@
     top: 15px;
     left: 25px;
     font-size: 1.3em;
+  }
+}
+
+@media only screen and (max-width: 1300px) {
+  .team {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media only screen and (max-width: 950px) {
+  .team {
+    grid-template-columns: 1fr;
   }
 }
