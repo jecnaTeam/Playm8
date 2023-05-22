@@ -1,0 +1,22 @@
+input{
+margin-top: 5px;
+}
+#show {
+    display: none;
+  }
+#loggedOut{
+    z-index: 2;
+  display:flex;
+  position: fixed;
+  right: 5px;
+  top: 5px;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-bottom: 15px solid rgba(88, 52, 88, 0.3);
+  border-right: 3px solid rgba(91, 47, 91, 0.3);
+  border-left: 15px solid rgba(90, 48, 90, 0.3);
+  border-top: 3px solid rgba(80, 38, 80, 0.3);
+  border-radius: 30px;
+  transition: all .5s ease-in-out;
+  border-radius: 20px;
+}

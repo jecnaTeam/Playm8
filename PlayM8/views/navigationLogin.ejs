@@ -1,16 +1,16 @@
-
+<script src="../public/scripts/scripts.js"></script>
 <% if (!logged) { %>
     <div id="LoggedOut">
-         <form action="/login">
+         <form action="/login" method="post" onsubmit="showDiv()">
             <table>
                 <tr>
                     <th>
-                        <input type="text" name="username">
+                        <input type="text" name="username" placeholder="Username" required>
                     </th>
                 </tr>
                 <tr>
                     <th>
-                        <input type="password" name="password" id="passwordInput">
+                        <input type="password" name="password" id="passwordInput" placeholder="Password" required>
                     </th>
                 </tr>
                 <tr>
@@ -27,11 +27,11 @@
 
     <%} else { %>
 <div id="LoggedIn">
-<span><% username %></span>
+<span><%- username -%></span>
 
-<form action="/LogOut">
+<form action="/LogOut" method="POST">
 
-    <input type="button" value="Log out">
+    <input type="submit" value="Log out">
 
 </form>
 
