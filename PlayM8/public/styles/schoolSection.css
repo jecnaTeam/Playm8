@@ -1,0 +1,13 @@
+#school{
+    display: flex;
+    flex-direction: row;
+}
+#map {
+    flex: 4;
+    margin: 30px;
+    height: 50vh;
+    max-width: 50vh;
+  }
+  #text{
+    flex: 1;
+  }

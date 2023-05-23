@@ -1,3 +1,25 @@
 <section class="main_section" id="school">
 
+<div id="text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum velit officia possimus architecto deserunt alias! Animi quo tempore nesciunt nihil repellat. Placeat laudantium natus quis recusandae mollitia a quaerat dolorem.</div>
+<div id="map"></div>
+
 </section>
+
+<script>
+    function initMap() {
+      var location = { lat: 50.075463455205806, lng: 14.425984497133877 }; // Replace with your desired location coordinates
+      
+      var map = new google.maps.Map(document.getElementById('map'), {
+        center: location,
+        zoom: 15 // Adjust the zoom level as needed
+      });
+
+      var marker = new google.maps.Marker({
+        position: location,
+        map: map,
+        title: 'SPŠE Ječná' // Replace with your desired marker title
+      });
+    }
+    initMap();
+  </script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC64j4y49yD1P_3pl_QEoUw1-Att5RtsPM&callback=initMap" async defer></script>
