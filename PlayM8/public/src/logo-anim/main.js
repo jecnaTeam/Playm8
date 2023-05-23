@@ -10,18 +10,11 @@ const scene = new THREE.Scene();
 
 let mixer;
 
-/* const box = new THREE.BoxGeometry(1, 1, 1)
-const material = new THREE.MeshBasicMaterial({
-  color: 'red'
-})
-const boxMesh = new THREE.Mesh(box, material)
-scene.add(boxMesh) */
-
 // Loader
 const loader = new GLTFLoader()
 loader.load('../../../public/models/M81.glb', glb => {
   const model = glb.scene;
-  model.scale.set(0.10, 0.10, 0.10);
+  model.scale.set(0.11, 0.11, 0.11);
   scene.add(model);
   mixer = new THREE.AnimationMixer(model);
   const clips = glb.animations;
@@ -45,8 +38,8 @@ scene.add(light);
 
 // Canvas sizes
 const sizes = {
-  width: 500,
-  height: 500
+  width: window.innerWidth / 2,
+  height: window.innerWidth / 2,
 }
 
 // Camera
@@ -80,3 +73,20 @@ function animate() {
   requestAnimationFrame(animate);
   renderer.render(scene, camera);
 }
+
+// Resposive
+window.addEventListener('resize', () => {
+  console.log('res');
+  // update display width and height
+  const width = window.innerWidth / 2
+  const height = window.innerHeight / 2
+  // update camera aspect
+  if (window.innerWidth > 500) {
+    camera.aspect = width / height
+    camera.updateProjectionMatrix()
+    // update renderer
+    renderer.setSize(width, height)
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
+    renderer.render(scene, camera)
+  }
+})
