@@ -4,11 +4,19 @@
       "password": "d"
     },
     {
-      "username": "jane",
-      "password": "pass456"
+      "username": "Vojta",
+      "password": "v"
     },
     {
-      "username": "admin",
-      "password": "admin123"
+      "username": "Sam",
+      "password": "s"
+    },
+    {
+      "username": "Sam",
+      "password": "s"
+    },
+    {
+      "username": "Sam",
+      "password": "s"
     }
   ]
