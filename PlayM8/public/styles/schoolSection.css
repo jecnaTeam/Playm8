@@ -1,6 +1,7 @@
 #school{
     display: flex;
     flex-direction: row;
+    padding-top: 50px;
 }
 #map {
     flex: 4;
