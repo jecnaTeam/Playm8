@@ -1,0 +1,43 @@
+.main_section#about {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+@media only screen and (min-width: 1400px) {
+  .main_section#about {
+    justify-content: space-around;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .main_section#about {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+#about .model_box {
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#about ._info {
+  max-width: 1200px;
+  padding: 1.5em;
+}
+
+#about ._info > .title {
+  margin-bottom: 0.35em;
+}
+
+@media only screen and (max-width: 650px) {
+  .main_section#about {
+    padding-top: 50px;
+  }
+  #about ._info {
+    padding: 0;
+  }
+}

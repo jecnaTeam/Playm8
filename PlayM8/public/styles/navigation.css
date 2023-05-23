@@ -1,27 +1,25 @@
 .navigation {
-  width: 190px;
+  width: 140px;
   height: 100vh;
   position: fixed;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   color: white;
+  padding: 1%;
 }
 
 .navigation ul {
-  padding: 1em;
-  margin: 15px 0 0 15px;
   list-style-type: none;
   position: relative;
   display: flex;
   flex-direction: column;
-  background-color: rgba(0, 0, 0, 0.3);
-  border-bottom: 15px solid rgba(176, 19, 176, 0.3);
-  border-right: 15px solid rgba(176, 19, 176, 0.3);
-  border-left: 3px solid rgba(176, 19, 176, 0.3);
-  border-top: 3px solid rgba(176, 19, 176, 0.3);
   border-radius: 30px;
   transition: all .5s ease-in-out;
+  margin: 15px 0 0 15px;
+  padding: .7em;
+  background-color: rgba(0, 0, 0, 0.3);
+  border: 4px solid rgba(176, 19, 176, 0.3);
 }
 
 .navigation ul:hover {
@@ -33,7 +31,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 2.2em;
+  margin-bottom: 2em;
 }
 
 .navigation_logo > a > img {
@@ -61,6 +59,7 @@
 }
 
 .navigation li span {
+  display: none;
   text-transform: capitalize;
   font-weight: 500;
 }
@@ -79,19 +78,34 @@
   flex-grow: 1;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (min-width: 800px) {
   .navigation ul {
-    padding: .7em;
-    border-bottom: 10px solid rgba(176, 19, 176, 0.3);
-    border-right: 10px solid rgba(176, 19, 176, 0.3);
-    border-left: 2px solid rgba(176, 19, 176, 0.3);
-    border-top: 2px solid rgba(176, 19, 176, 0.3);
+    padding: 1em;
   }
   .navigation {
-    width: 140px;
+    width: 200px;
   }
   .navigation li span {
-    display: none;
+    display: block;
+  }
+  .navigation li a {
+    justify-content: center;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  .navigation ul {
+    padding: 2em;
+    border-bottom: 15px solid rgba(176, 19, 176, 0.3);
+    border-right: 15px solid rgba(176, 19, 176, 0.3);
+    border-left: 3px solid rgba(176, 19, 176, 0.3);
+    border-top: 3px solid rgba(176, 19, 176, 0.3);
+  }
+  .navigation {
+    width: 250px;
+  }
+  .navigation li span {
+    display: block;
   }
   .navigation li a {
     justify-content: center;

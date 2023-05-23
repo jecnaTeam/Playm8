@@ -14,7 +14,7 @@ let mixer;
 const loader = new GLTFLoader()
 loader.load('../../../public/models/M81.glb', glb => {
   const model = glb.scene;
-  model.scale.set(0.11, 0.11, 0.11);
+  model.scale.set(0.125, 0.125, 0.125);
   scene.add(model);
   mixer = new THREE.AnimationMixer(model);
   const clips = glb.animations;
@@ -38,8 +38,8 @@ scene.add(light);
 
 // Canvas sizes
 const sizes = {
-  width: window.innerWidth / 2,
-  height: window.innerWidth / 2,
+  width: window.innerWidth * 0.3,
+  height: window.innerWidth * 0.3,
 }
 
 // Camera
@@ -76,10 +76,9 @@ function animate() {
 
 // Resposive
 window.addEventListener('resize', () => {
-  console.log('res');
   // update display width and height
-  const width = window.innerWidth / 2
-  const height = window.innerHeight / 2
+  const width = window.innerWidth * 0.3
+  const height = window.innerHeight * 0.3
   // update camera aspect
   if (window.innerWidth > 500) {
     camera.aspect = width / height

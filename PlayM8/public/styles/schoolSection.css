@@ -1,14 +1,44 @@
-#school{
-    display: flex;
-    flex-direction: row;
-    padding-top: 50px;
+#school {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 3em;
 }
+
+@media only screen and (max-width: 1200px) {
+  #school {
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  #school {
+    /* padding: 1.5em; */
+  }
+}
+
 #map {
-    flex: 4;
-    margin: 30px;
-    height: 50vh;
-    max-width: 50vh;
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  min-height: 300px;
+  margin: 2em 0;
+  border-radius: 1em;
+}
+
+@media only screen and (min-width: 1600px) {
+  #map {
+    min-height: 500px;
   }
-  #text{
-    flex: 1;
+  #school {
+    gap: 120px;
   }
+}
+
+#school > .box {
+  flex: 1;
+}
+
+#school > .box > .text > p {
+  text-align: start;
+}
