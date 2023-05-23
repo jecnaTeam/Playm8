@@ -28,10 +28,34 @@
 
 @media only screen and (min-width: 1600px) {
   #map {
-    min-height: 500px;
+    min-height: 400px;
   }
   #school {
     gap: 120px;
+  }
+}
+@media only screen and (min-width: 2100px) {
+  #map {
+    min-height: 500px;
+  }
+  #school {
+    gap: 130px;
+  }
+}
+@media only screen and (min-width: 2560px) {
+  #map {
+    min-height: 650px;
+  }
+  #school {
+    gap: 140px;
+  }
+}
+@media only screen and (min-width: 3800px) {
+  #map {
+    min-height: 750px;
+  }
+  #school {
+    gap: 150px;
   }
 }
 

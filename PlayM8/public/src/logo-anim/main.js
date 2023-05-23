@@ -13,6 +13,7 @@ let mixer;
 // Loader
 const loader = new GLTFLoader()
 loader.load('../../../public/models/M81.glb', glb => {
+// loader.load('../../../public/models/example-object.glb', glb => {
   const model = glb.scene;
   model.scale.set(0.125, 0.125, 0.125);
   scene.add(model);
@@ -32,9 +33,18 @@ loader.load('../../../public/models/M81.glb', glb => {
 })
 
 // Light
-const light = new THREE.DirectionalLight(0xffffff);
-light.position.set(2, 2, 5);
+const light = new THREE.SpotLight(0xffffff);
+light.position.set(0, 0, 5);
 scene.add(light);
+const light2 = new THREE.SpotLight(0xffffff);
+light2.position.set(4, 0, 6);
+scene.add(light2);
+const light3 = new THREE.SpotLight(0xffffff);
+light3.position.set(-3, 0, 2);
+scene.add(light3);
+const light4 = new THREE.SpotLight(0xffffff);
+light4.position.set(-3, -2, 4);
+scene.add(light4);
 
 // Canvas sizes
 const sizes = {
@@ -68,7 +78,7 @@ const clock = new THREE.Clock();
 // Animation
 function animate() {
   if (mixer) {
-    mixer.update(clock.getDelta());
+    mixer.update(clock.getDelta() / 2);
   }
   requestAnimationFrame(animate);
   renderer.render(scene, camera);
