@@ -129,6 +129,43 @@ a:hover {
   /* color: rgba(176, 19, 176, 0.8); */
 }
 
+
+/* buttom */
+button {
+  cursor: pointer;
+  text-transform: uppercase;
+  color: var(--primary-color);
+  font-weight: 600;
+  font-size: 1em;
+  background-color: var(--button-hover-gray);
+  border: solid 1px var(--blue-background);
+  border-radius: .7em;
+  padding: .4em .7em;
+  transition: background-color .15s ease-in-out;
+}
+
+button:hover {
+  background-color: var(--blue-hover);
+}
+
+/* input */
+input {
+  border: solid 2px var(--blue-background);
+  border-radius: .4em;
+  height: 2em;
+}
+
+input[type=text],input[type=password] {
+  padding: 12px;
+}
+
+input:focus {
+  border: solid 2px var(--blue-hover);
+
+}
+
+
+/* navigation */
 .nav {
   list-style-type: none;
   position: relative;
@@ -185,6 +222,10 @@ h1 {
   font-weight: 900;
   font-size: 4em;
   margin-bottom: 0.55em;
+}
+
+.blur-box {
+  backdrop-filter: blur(10px);
 }
 
 .title {
@@ -328,5 +369,7 @@ h1 {
   --blue-color: #7073a3;
   --blue-background: #45455588;
   --blue-hover: #73738788;
+  --button-primary: #ffe6ff;
   --button-hover-gray: #827280;
+  --border-primary: 
 }
