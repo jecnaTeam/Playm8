@@ -48,8 +48,8 @@ scene.add(light4);
 
 // Canvas sizes
 const sizes = {
-  width: window.innerWidth * 0.3,
-  height: window.innerWidth * 0.3,
+  width: window.innerWidth  > 500 ? window.innerWidth * 0.3 : window.innerWidth * 0.7,
+  height: window.innerHeight  > 500 ? window.innerHeight * 0.4 : window.innerHeight * 0.7,
 }
 
 // Camera
@@ -87,15 +87,19 @@ function animate() {
 // Resposive
 window.addEventListener('resize', () => {
   // update display width and height
-  const width = window.innerWidth * 0.3
-  const height = window.innerHeight * 0.3
   // update camera aspect
   if (window.innerWidth > 500) {
-    camera.aspect = width / height
-    camera.updateProjectionMatrix()
-    // update renderer
-    renderer.setSize(width, height)
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
-    renderer.render(scene, camera)
+    var widthRes = window.innerWidth * 0.3
+    var heightRes = window.innerHeight * 0.4
+  }else {
+    var widthRes = window.innerWidth * 0.8
+    var heightRes = window.innerHeight * 0.8
+    console.log('object');
   }
+  camera.aspect = widthRes / heightRes
+  camera.updateProjectionMatrix()
+  // update renderer
+  renderer.setSize(widthRes, heightRes)
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
+  renderer.render(scene, camera)
 })
