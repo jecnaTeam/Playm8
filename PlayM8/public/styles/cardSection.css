@@ -46,7 +46,8 @@
 }
 
 @media only screen and (max-width: 950px) {
-  .flip-card, .flip-card-front {
+  .flip-card,
+  .flip-card-front {
     width: 300px;
     height: 340px;
   }
@@ -98,8 +99,9 @@
   border-radius: 2em;
   border: solid 2px rgba(255, 255, 255, 0.5);
   color: var(--primary-color);
-  transform: rotateY(180deg);
   backdrop-filter: blur(8px);
+  transform: rotateY(180deg);
+  transition: all 1s;
 }
 
 .flip-card-back h2 {
@@ -159,4 +161,36 @@
 .flip-card p {
   line-height: 1em;
   font-weight: 300;
+}
+
+/* Animations */
+
+.flip-card .hidden {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-100%);
+  transition: all .1s ease-in-out;
+}
+
+.flip-card .show{
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
+
+
+.flip-card:nth-child(2) {
+  transition-delay: 100ms;
+}
+.flip-card:nth-child(3) {
+  transition-delay: 200ms;
+}
+.flip-card:nth-child(4) {
+  transition-delay: 300ms;
+}
+.flip-card:nth-child(5) {
+  transition-delay: 400ms;
+}
+.flip-card:nth-child(6) {
+  transition-delay: 500ms;
 }

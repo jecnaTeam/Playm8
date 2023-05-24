@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@100;200;300;400;500;600;700;800;900&display=swap%27");
 
 * {
+  z-index: 20;
   padding: 0;
   margin: 0;
   scroll-behavior: smooth;
@@ -14,13 +15,56 @@ html {
 body {
   font-family: "Inconsolata", monospace;
   color: var(--primary-color);
-  background-image: url("https://media.discordapp.net/attachments/1108874219497992262/1110658459680125081/background_2.png?width=990&height=1102");
-  background-size: 100%;
-  background-position: top;
-  background-repeat: repeat-y;
   width: 100vw;
   min-height: 100vh;
+  background-image: url("../imgs/assets/background/empty-background.png");
+  background-repeat: repeat-y;
+  background-position: center;
+  background-size: 100%;
+  position: relative;
+  /* overflow-x: hidden; */
 }
+
+#left {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: url(../imgs/assets/background/waves.png);
+  background-repeat: repeat-y;
+  background-size: 100%;
+}
+
+#right {
+  position: absolute;
+  /* right: -25%; */
+  height: 100%;
+  width: 100%;
+  background-image: url(../imgs/assets/background/xbox-buttons.png);
+  background-repeat: repeat-y;
+  background-size: 100%;
+}
+
+.hidden {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-100%);
+  transition: all 1.5s ease-in-out;
+}
+
+.show{
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
+
+@media (prefers-reduced-motion) {
+  .hidden {
+    transition: none;
+  }
+}
+
+
+
 
 #root {
   display: grid;
