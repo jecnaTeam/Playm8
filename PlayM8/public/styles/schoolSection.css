@@ -5,6 +5,17 @@
   gap: 3em;
 }
 
+#school h1 {
+  color: var(--secondary-color);
+}
+
+#school p {
+  padding: 1.5em;
+  border-radius: 5%;
+  border: solid 2px var(--secondary-color);
+
+}
+
 @media only screen and (max-width: 1200px) {
   #school {
     flex-direction: column;

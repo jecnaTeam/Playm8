@@ -7,6 +7,7 @@
   justify-content: space-between;
   color: var(--primary-color);
   padding: 1.5%;
+  padding-right: 0;
 }
 
 .navigation ul {
@@ -68,7 +69,7 @@
     padding: 2em;
   }
   .navigation {
-    width: 330px;
+    width: 280px;
   }
   .navigation .logo img {
     width: 130px;

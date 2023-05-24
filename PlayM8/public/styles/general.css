@@ -74,7 +74,7 @@ body {
 }
 @media only screen and (min-width: 1600px) {
   #root {
-    grid-template-columns: 330px 1fr;
+    grid-template-columns: 280px 1fr;
   }
 }
 @media only screen and (min-width: 2100px) {
@@ -148,12 +148,19 @@ a:hover {
 
 /* text */
 p {
-  font-size: 1.2em;
-  line-height: 24px;
+  font-size: 1.3em;
+  line-height: 29px;
   letter-spacing: 0.5px;
-  font-weight: 300;
+  font-weight: 400;
   word-spacing: -2px;
   padding: 0 0.25em;
+}
+
+h1 {
+  color: var(--secondary-color);
+  font-weight: 900;
+  font-size: 4em;
+  margin-bottom: 0.55em;
 }
 
 .title {
@@ -293,6 +300,8 @@ p {
 
 :root {
   --primary-color: #f0f0f0;
+  --secondary-color: #FFE6FF;
+  --purple-color: rgb(224, 66, 224);
   --blue-color: #7073A3;
   --blue-background: #45455588;
   --button-hover-gray: #827280;
