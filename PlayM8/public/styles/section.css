@@ -1,36 +1,59 @@
-.main_section {
-  min-height: 100vh;
-  width: 100%;
+
+/* ABOUT */
+
+.main_section#about {
+  /* padding: 3.5em 0; */
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  align-items: center;
 }
 
-.main_section > .box {
-  flex: 1;
-  border: solid 1px black;
-  position: relative;
+@media only screen and (min-width: 1400px) {
+  .main_section#about {
+    justify-content: space-around;
+  }
 }
 
-.main_section .model_box {
-  z-index: 30;
-  position: absolute;
-  left: 12%;
+.main_section > .model_box {
+  width: fit-content;
+  margin: 2em;
+  margin-right: 3em;
 }
 
-.main_section .about_info {
-  max-width: 45%;
-  position: absolute;
-  right: 2%;
-  bottom: 7%;
-  background-color: black;
-  color: white;
-  padding: 1em;
+.main_section > ._info {
+
 }
 
-.main_section .about_info p {
-  font-size: 1.4em;
-  line-height: 1.25em;
+/* .main_section > ._info p {
+  font-size: 1.2em;
+  line-height: 1.2em;
+  letter-spacing: 1.5px;
+  font-weight: 300;
+  text-align: center;
+} */
+
+.main_section > ._info h1 {
+  letter-spacing: 1.5px;
+  margin-bottom: 0.5em;
+  margin-left: 0.5em;
+  font-size: 2.3em;
+  font-weight: 700;
 }
+
+@media only screen and (max-width: 1200px) {
+  .main_section#about {
+    margin-top: 7%;
+    flex-direction: column;
+  }
+  .main_section#about ._info {
+    flex: none;
+  }
+  .main_section > ._info > ._info_holder {
+    margin: 3em 2em;
+  }
+}
+
+/* CARDS */
 
 .main_section#cards {
   position: relative;
@@ -38,7 +61,7 @@
 
 .main_section#cards > .section_container {
   max-width: 1200px;
-  margin: 1em auto;
+  margin: 1.5em auto;
   padding: 0.5em;
   display: flex;
   flex-direction: column;
@@ -46,17 +69,11 @@
 }
 
 .main_section#cards > .section_container > .manager {
-  display: flex;
-  flex-flow: wrap;
   margin-bottom: 1em;
 }
 .main_section#cards > .section_container > .team {
-  display: flex;
-  flex-flow: wrap;
   justify-content: center;
 }
-
-/* CARDS */
 
 .card {
   position: relative;
@@ -66,6 +83,34 @@
   background-image: url("../assets/ram4.png"); /* Frame path */
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+.card:hover . {
+  transform: rotateY(180deg);
+}
+
+.team {
+  min-height: 70vh;
+  width: 100%;
+  margin: 5% 0;
+  row-gap: 2em;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.manager.team {
+  grid-template-columns: 1fr;
 }
 
 .manager > .card {
@@ -105,12 +150,12 @@
   .card {
     width: 220px;
     height: 220px;
-  } 
+  }
   .card > .name {
     font-size: 1.1em;
     top: 13px;
     left: 25px;
-  } 
+  }
   .manager > .card {
     width: 240px;
     height: 240px;
@@ -121,5 +166,140 @@
     left: 25px;
     font-size: 1.3em;
   }
+}
+
+@media only screen and (max-width: 1300px) {
+  .team {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media only screen and (max-width: 950px) {
+  .team {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+  margin: 2em;
+  background-color: transparent;
+  width: 320px;
+  height: 360px;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  cursor: pointer;
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card:not(:hover) > .main_section#cards {
+  filter: blur(3px);
+}
+
+
+
+/* Position the front and back side */
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  padding: 1em;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  width: 320px;
+  height: 360px;
+  background-image: url("https://media.discordapp.net/attachments/1108119807502581820/1110512383031517284/frame.png?width=640&height=720"); /* Frame path */
+  background-image: url;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.flip-card-front h1 {
+  position: absolute;
+  top: 17px;
+  left: 28px;
+}
+
+/* Style the back side */
+.flip-card-back {
+  width: 350px;
+  height: 400px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 2em;
+  border: solid 2px rgba(255, 255, 255, 0.5);
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.flip-card-back h1 {
+  font-size: 1.8em;
+  font-weight: 900;
+  color: rgba(243, 3, 243, 0.542);
+}
+
+.flip-card-back p {
+  text-align: justify;
+  padding: 1em 1.5em 1.5em 1.5em;
+  font-size: 1.1em;
+  font-weight: 200;
+}
+
+.flip-card-back .card-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1.7em;
+  margin-top: .4em;
+  margin-bottom: .2em;
+}
+
+.flip-card-back .card-title img {
+  width: 40px;
+}
+
+.flip-card-front > .avatar {
+  width: 150px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-85%);
+  left: 40px;
+  border-radius: 100%;
+  border: solid 8px #720b61;
+}
+
+.flip-card-front .role-holder {
+  width: 115px;
+  height: 115px;
+  margin: 10px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: flex;
+}
+
+.flip-card-front > .role {
+  width: 55px;
+  position: absolute;
+  bottom: 40px;
+  right: 37px;
 }
 

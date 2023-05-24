@@ -1,3 +1,40 @@
 <section class="main_section" id="school">
-
+  <div class="box">
+    <h1>Grounds of our education</h1>
+    <p>
+      Discover the exceptional learning environment of SPŠE Ječná, a prestigious
+      school with a primary focus on programming and modern IT engineering.
+      Perfect for students residing in Czechia, our institution offers the
+      knowledge to equip you with the skills and knowledge needed to excel in
+      the digital age. With a commitment to innovation and a supportive
+      community, SPŠE Ječná is the ideal destination for aspiring developers
+      looking to thrive in today's technology-driven world. If the topics in
+      this project were close to you and you're interested in learning how to
+      make projects like this and much more, consider studying at SPŠE Ječná.
+    </p>
+  </div>
+  <div id="map"></div>
 </section>
+
+<script>
+  function initMap() {
+    var location = { lat: 50.075463455205806, lng: 14.425984497133877 }; // Replace with your desired location coordinates
+
+    var map = new google.maps.Map(document.getElementById("map"), {
+      center: location,
+      zoom: 15, // Adjust the zoom level as needed
+    });
+
+    var marker = new google.maps.Marker({
+      position: location,
+      map: map,
+      title: "SPŠE Ječná", // Replace with your desired marker title
+    });
+  }
+  initMap();
+</script>
+<script
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC64j4y49yD1P_3pl_QEoUw1-Att5RtsPM&callback=initMap"
+  async
+  defer
+></script>
