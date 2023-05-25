@@ -8,7 +8,8 @@
 }
 
 @media only screen and (max-width: 450px) {
-  .main_section#cards, .main_section#cards > .section_container  {
+  .main_section#cards,
+  .main_section#cards > .section_container {
     padding: 0;
   }
   .flip-card {
@@ -47,7 +48,7 @@
 /* CARD */
 
 .flip-card {
-  margin: 0;
+  margin-bottom: 2.5em ;
   background-color: transparent;
   width: 320px;
   height: 360px;
@@ -176,14 +177,13 @@
   opacity: 0;
 
   transform: translateX(-100%);
-  transition: all .1s ease-in-out;
+  transition: all 0.1s ease-in-out;
 }
 
-.flip-card .show{
+.flip-card .show {
   opacity: 1;
   transform: translateX(0);
 }
-
 
 .flip-card:nth-child(2) {
   transition-delay: 100ms;
@@ -200,5 +200,3 @@
 .flip-card:nth-child(6) {
   transition-delay: 500ms;
 }
-
-
