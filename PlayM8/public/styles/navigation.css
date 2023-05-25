@@ -29,13 +29,10 @@
 .navigation #login img {
   width: 24px;
 }
-/* .navigation #login span {
-  background-color: var(--button-hover-gray);
-  margin: 0 auto;
-  margin-top: .7em;
-  padding: .3em;
-  width: 90%;
-} */
+
+.navigation ul a:hover {
+  scale: unset;
+}
 
 .navigation #login:hover {
   background-color: var(--blue-hover);

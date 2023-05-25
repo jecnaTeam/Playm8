@@ -17,7 +17,7 @@ body {
   color: var(--primary-color);
   width: 100vw;
   min-height: 100vh;
-  background-image: url("../imgs/assets/background/empty-background.png");
+  background-image: url(../imgs/assets/background/empty-background.png);
   background-repeat: repeat-y;
   background-position: center;
   background-size: 100%;
@@ -46,14 +46,12 @@ body {
 
 .hidden {
   opacity: 0;
-  filter: blur(5px);
   transform: translateX(-100%);
   transition: all 1.5s ease-in-out;
 }
 
 .show{
   opacity: 1;
-  filter: blur(0);
   transform: translateX(0);
 }
 
@@ -170,6 +168,7 @@ a span {
 }
 
 a:hover {
+  scale: 1.1;
   /* color: rgba(176, 19, 176, 0.8); */
 }
 
@@ -304,10 +303,6 @@ h1 {
   .title {
     font-size: 4em;
   }
-  /* images */
-  .logo {
-    /* scale: 1.2; */
-  }
 }
 
 /* 2100 -> */
@@ -329,10 +324,6 @@ h1 {
   }
   .title {
     font-size: 6em;
-  }
-  /* images */
-  .logo {
-    /* scale: 1.7; */
   }
 }
 
@@ -399,10 +390,6 @@ h1 {
   }
   .title {
     font-size: 8.5em;
-  }
-  /* images */
-  .logo {
-    /* scale: 3.5; */
   }
 }
 

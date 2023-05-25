@@ -88,8 +88,7 @@
 .flip-card-front {
   width: 320px;
   height: 360px;
-  background-image: url("https://media.discordapp.net/attachments/1108119807502581820/1110512383031517284/frame.png?width=640&height=720"); /* Frame path */
-  background-image: url;
+  background-image: url(../imgs/assets/cards/frame.png); /* Frame path */
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -101,14 +100,13 @@
 }
 
 .flip-card-back {
-  left: -20px;
   width: 320px;
   height: 400px;
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 2em;
   border: solid 2px rgba(255, 255, 255, 0.5);
   color: var(--primary-color);
-  backdrop-filter: blur(8px);
+  backdrop-filter: blur(10px);
   transform: rotateY(180deg);
   transition: all 1s;
 }
@@ -176,14 +174,13 @@
 
 .flip-card .hidden {
   opacity: 0;
-  filter: blur(5px);
+
   transform: translateX(-100%);
   transition: all .1s ease-in-out;
 }
 
 .flip-card .show{
   opacity: 1;
-  filter: blur(0);
   transform: translateX(0);
 }
 
@@ -203,3 +200,5 @@
 .flip-card:nth-child(6) {
   transition-delay: 500ms;
 }
+
+
