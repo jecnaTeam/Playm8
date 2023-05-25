@@ -7,9 +7,19 @@
   padding: 0.5em;
 }
 
+@media only screen and (max-width: 450px) {
+  .main_section#cards, .main_section#cards > .section_container  {
+    padding: 0;
+  }
+  .flip-card {
+    margin: 0;
+  }
+}
+
 .team {
   min-height: 60vh;
   width: 100%;
+  min-width: 320px;
   margin: 5% 0;
   gap: 1.5em 1em;
   display: grid;
@@ -37,19 +47,18 @@
 /* CARD */
 
 .flip-card {
-  margin: 2em;
+  margin: 0;
   background-color: transparent;
   width: 320px;
   height: 360px;
   perspective: 1000px;
   cursor: pointer;
+  justify-self: center;
 }
 
-@media only screen and (max-width: 950px) {
-  .flip-card,
-  .flip-card-front {
-    width: 300px;
-    height: 340px;
+@media only screen and (min-width: 450px) {
+  .flip-card {
+    margin: 1em;
   }
 }
 
