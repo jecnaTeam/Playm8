@@ -1,0 +1,47 @@
+#wave-1 {
+    position: absolute;
+    z-index: 5;
+    height: 100%;
+    width: 100%;
+    background-image: url(../imgs/assets/background/wave-1.png);
+    background-repeat: repeat-y;
+    background-size: 100%;
+}
+#wave-2 {
+    position: absolute;
+    z-index: 6;
+    height: 100%;
+    width: 100%;
+    background-image: url(../imgs/assets/background/wave-2.png);
+    background-repeat: repeat-y;
+    background-size: 100%;
+}
+#wave-3 {
+    position: absolute;
+    z-index: 7;
+    height: 100%;
+    width: 100%;
+    background-image: url(../imgs/assets/background/wave-3.png);
+    background-repeat: repeat-y;
+    background-size: 100%;
+}
+#wave-4 {
+    position: absolute;
+    z-index: 8;
+    height: 100%;
+    width: 100%;
+    background-image: url(../imgs/assets/background/wave-4.png);
+    background-repeat: repeat-y;
+    background-size: 100%;
+}
+
+#xbox-buttons {
+    position: absolute;
+    z-index: 9;
+    /* right: -25%; */
+    height: 100%;
+    width: 100%;
+    background-image: url(../imgs/assets/background/xbox-buttons.png);
+    background-repeat: repeat-y;
+    background-size: 100%;
+}

@@ -22,12 +22,6 @@
   }
 }
 
-@media only screen and (max-width: 650px) {
-  #school {
-    /* padding: 1.5em; */
-  }
-}
-
 #map {
   flex: 1;
   width: 100%;

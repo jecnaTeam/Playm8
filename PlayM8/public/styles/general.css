@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@100;200;300;400;500;600;700;800;900&display=swap%27");
 
 * {
+  z-index: 20;
   padding: 0;
   margin: 0;
   scroll-behavior: smooth;
@@ -14,39 +15,63 @@ html {
 body {
   font-family: "Inconsolata", monospace;
   color: var(--primary-color);
-  background-image: url("https://media.discordapp.net/attachments/1108874219497992262/1110658459680125081/background_2.png?width=990&height=1102");
-  background-size: 100%;
-  background-position: top;
-  background-repeat: repeat-y;
   width: 100vw;
   min-height: 100vh;
+  background-image: url(../imgs/assets/background/empty-background.png);
+  background-repeat: repeat-y;
+  background-position: center;
+  background-size: 100%;
+  position: relative;
+  /* overflow-x: hidden; */
 }
 
-#navigation {
-  height: 100vh;
+#left {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: url(../imgs/assets/background/waves.png);
+  background-repeat: repeat-y;
+  background-size: 100%;
 }
 
-#navigationLogin {
-  z-index: 2;
-  display: flex;
-  position: fixed;
-  right: 5px;
-  top: 5px;
-  padding: 10px;
-  background-color: rgba(0, 0, 0, 0.3);
-  border-bottom: 15px solid rgba(88, 52, 88, 0.3);
-  border-right: 3px solid rgba(91, 47, 91, 0.3);
-  border-left: 15px solid rgba(90, 48, 90, 0.3);
-  border-top: 3px solid rgba(80, 38, 80, 0.3);
-  border-radius: 30px;
-  transition: all 0.5s ease-in-out;
-  border-radius: 20px;
+#right {
+  position: absolute;
+  /* right: -25%; */
+  height: 100%;
+  width: 100%;
+  background-image: url(../imgs/assets/background/xbox-buttons.png);
+  background-repeat: repeat-y;
+  background-size: 100%;
 }
+
+.hidden {
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: all 1.5s ease-in-out;
+}
+
+.show{
+  opacity: 1;
+  transform: translateX(0);
+}
+
+@media (prefers-reduced-motion) {
+  .hidden {
+    transition: none;
+  }
+}
+
+
+
 
 #root {
   display: grid;
   grid-template-columns: 140px 1fr;
   position: relative;
+}
+
+#navigation {
+  height: 100vh;
 }
 
 #sections {
@@ -143,7 +168,86 @@ a span {
 }
 
 a:hover {
+  scale: 1.1;
   /* color: rgba(176, 19, 176, 0.8); */
+}
+
+
+/* buttom */
+button {
+  cursor: pointer;
+  text-transform: uppercase;
+  color: var(--primary-color);
+  font-weight: 600;
+  font-size: 1em;
+  background-color: var(--button-hover-gray);
+  border: solid 1px var(--blue-background);
+  border-radius: .7em;
+  padding: .4em .7em;
+  transition: background-color .15s ease-in-out;
+}
+
+button:hover {
+  background-color: var(--blue-hover);
+}
+
+/* input */
+input {
+  border: solid 2px var(--blue-background);
+  border-radius: .4em;
+  height: 2em;
+}
+
+input[type=text],input[type=password] {
+  padding: 12px;
+}
+
+input:focus {
+  border: solid 2px var(--blue-hover);
+
+}
+
+
+/* navigation */
+.nav {
+  list-style-type: none;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7em;
+  border-radius: 25px;
+  transition: all 0.5s ease-in-out;
+  padding: 1.2em;
+  background-color: var(--blue-background);
+  border: 4px solid var(--blue-color);
+}
+
+.nav a span {
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.nav .logo {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5%;
+}
+.nav .logo img {
+  width: 100px;
+  height: 100px;
+}
+
+.nav-button {
+  padding: 0.4em;
+  border-radius: 15px;
+  background-color: var(--blue-color);
+  transition: background-color 0.4s ease-in-out;
+}
+
+.nav-button:hover {
+  background-color: var(--button-hover-gray);
 }
 
 /* text */
@@ -161,6 +265,10 @@ h1 {
   font-weight: 900;
   font-size: 4em;
   margin-bottom: 0.55em;
+}
+
+.blur-box {
+  backdrop-filter: blur(10px);
 }
 
 .title {
@@ -195,10 +303,6 @@ h1 {
   .title {
     font-size: 4em;
   }
-  /* images */
-  .logo {
-    /* scale: 1.2; */
-  }
 }
 
 /* 2100 -> */
@@ -220,10 +324,6 @@ h1 {
   }
   .title {
     font-size: 6em;
-  }
-  /* images */
-  .logo {
-    /* scale: 1.7; */
   }
 }
 
@@ -291,18 +391,16 @@ h1 {
   .title {
     font-size: 8.5em;
   }
-  /* images */
-  .logo {
-    /* scale: 3.5; */
-  }
 }
-
 
 :root {
   --primary-color: #f0f0f0;
-  --secondary-color: #FFE6FF;
+  --secondary-color: #ffe6ff;
   --purple-color: rgb(224, 66, 224);
-  --blue-color: #7073A3;
+  --blue-color: #7073a3;
   --blue-background: #45455588;
+  --blue-hover: #73738788;
+  --button-primary: #ffe6ff;
   --button-hover-gray: #827280;
+  --border-primary: 
 }

@@ -7,9 +7,19 @@
   padding: 0.5em;
 }
 
+@media only screen and (max-width: 450px) {
+  .main_section#cards, .main_section#cards > .section_container  {
+    padding: 0;
+  }
+  .flip-card {
+    margin: 0;
+  }
+}
+
 .team {
   min-height: 60vh;
   width: 100%;
+  min-width: 320px;
   margin: 5% 0;
   gap: 1.5em 1em;
   display: grid;
@@ -37,18 +47,18 @@
 /* CARD */
 
 .flip-card {
-  margin: 2em;
+  margin: 0;
   background-color: transparent;
   width: 320px;
   height: 360px;
   perspective: 1000px;
   cursor: pointer;
+  justify-self: center;
 }
 
-@media only screen and (max-width: 950px) {
-  .flip-card, .flip-card-front {
-    width: 300px;
-    height: 340px;
+@media only screen and (min-width: 450px) {
+  .flip-card {
+    margin: 1em;
   }
 }
 
@@ -78,8 +88,7 @@
 .flip-card-front {
   width: 320px;
   height: 360px;
-  background-image: url("https://media.discordapp.net/attachments/1108119807502581820/1110512383031517284/frame.png?width=640&height=720"); /* Frame path */
-  background-image: url;
+  background-image: url(../imgs/assets/cards/frame.png); /* Frame path */
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -91,15 +100,15 @@
 }
 
 .flip-card-back {
-  left: -20px;
   width: 320px;
   height: 400px;
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 2em;
   border: solid 2px rgba(255, 255, 255, 0.5);
   color: var(--primary-color);
+  backdrop-filter: blur(10px);
   transform: rotateY(180deg);
-  backdrop-filter: blur(8px);
+  transition: all 1s;
 }
 
 .flip-card-back h2 {
@@ -160,3 +169,36 @@
   line-height: 1em;
   font-weight: 300;
 }
+
+/* Animations */
+
+.flip-card .hidden {
+  opacity: 0;
+
+  transform: translateX(-100%);
+  transition: all .1s ease-in-out;
+}
+
+.flip-card .show{
+  opacity: 1;
+  transform: translateX(0);
+}
+
+
+.flip-card:nth-child(2) {
+  transition-delay: 100ms;
+}
+.flip-card:nth-child(3) {
+  transition-delay: 200ms;
+}
+.flip-card:nth-child(4) {
+  transition-delay: 300ms;
+}
+.flip-card:nth-child(5) {
+  transition-delay: 400ms;
+}
+.flip-card:nth-child(6) {
+  transition-delay: 500ms;
+}
+
+

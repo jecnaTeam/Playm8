@@ -16,7 +16,7 @@
   max-width: 1400px;
   padding: 2em;
   border: solid 1px var(--primary-color);
-  border-radius: 5%;
+  border-radius: 2em;
 }
 
 #about ._info > .title {

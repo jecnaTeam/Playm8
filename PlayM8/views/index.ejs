@@ -12,20 +12,18 @@
   <div id="root">
     <div id="navigation">
       <%-include("navigation")-%>
- 
     </div>
-    <div id="navigationLogin">
+    <div id="navigationLogin" onclick="showDiv()">
 
-      <i class="fas fa-id-badge" id="iconn" style="font-size:60px; cursor: pointer" onclick="showDiv()"></i>
+      <img id="iconn"  src="../public/imgs/icons/account.svg" alt="account">
       <div id="show">
         <%-include("navigationLogin")-%>
       </div>
-    
 
     </div>
     <div id="sections">
       <%-include("aboutSection")-%>
-      
+      <%-include("cardsSection")-%>
       <%-include("schoolSection")-%>
       <%-include("footer")-%>
   </div>
